@@ -1,6 +1,11 @@
-<h1>Owners#index</h1>
-<% @owners.each do |owner| %>
-<%= link_to 'Show Owner', owner_path(owner) %>
-<%= link_to 'Edit Owner', edit_owner_path(owner) %>
-<%= link_to 'Destroy Owner', owner, method: :delete %>
-<% end %>
+<h1>All Owners  </h1>
+
+<ul>
+  <% @owners.each do |owner| %>
+  <li><%= link_to owner.name, owner_path(owner) %></li>
+  <li><%= link_to 'Edit Owner', edit_owner_path(owner) %></li>
+  <li><%= link_to 'Destroy Owner', owner, method: :delete %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Create New Owner', new_owner_path %>

@@ -1,7 +1,12 @@
-<h1>Owners#show</h1>
+<h1>Owners#show</ h1>
 <%= @owner.owner_name %>
 <%= @owner.age %>
 <%= @owner.dog_name %>
 <%= @owner.city %>
+
+<hr />
+<p>What do you want to do?</p>
+<%= link_to 'Edit Owner', edit_owner_path(@owner) %>
+<%= link_to 'Delete Owner', @owner, method: :delete %>
 
 <%= link_to 'Back', owners_path %>

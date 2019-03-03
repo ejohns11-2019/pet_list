@@ -1,0 +1,14 @@
+<h1><%= @owner.id ? 'Edit an Owner' : 'Create a new Owner' %></h1>
+
+<%= form_for @owner do |f| %>
+  <%= f.label :owner_name %>
+  <%= f.text_field :owner_name, required: true, autofocus: true %>
+
+  <%= f.label :dog_name %>
+  <%= f.text_field :dog_name, required: true %>
+
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+
+  <%= f.submit %>
+<% end %>
